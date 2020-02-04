@@ -10,10 +10,11 @@ import java.util.Date;
 public class Person {
 
     private String name;
-    @JsonFormat(pattern="MM/DD/YYYY")
+    @JsonFormat(pattern="MM/dd/yyyy")
     private Date dateRegistered;
     private String email;
     private String address;
+
 
     public Person() {
     }
@@ -77,7 +78,9 @@ public class Person {
                 ", dateRegistered=" + dateRegistered +
                 ", email='" + email + '\'' +
                 ", address='" + address + '\'' +
+                ", age=" + getAge() +
                 '}';
     }
+
 }
 
